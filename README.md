@@ -1,6 +1,6 @@
-![banner_speakeasy](https://user-images.githubusercontent.com/54938035/232477598-1d0c0726-5f66-4bbb-a7fa-2a31ae7d7f78.svg)
+![banner_happyhaven](https://user-images.githubusercontent.com/54938035/232477598-1d0c0726-5f66-4bbb-a7fa-2a31ae7d7f78.svg)
 
-[Speakeasy](https://chatroom-speakeasy.adaptable.app/)
+[HappyHaven](https://happyhaven.adaptable.app/)
 
 # Chatroom App
 
