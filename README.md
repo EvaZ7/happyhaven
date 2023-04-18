@@ -12,7 +12,7 @@ Voor het vak Realtime Web gaan we samen een basic Chatroom app maken. Deze app g
 
 
 ## Table of Contents
-* [Taakverdeling](#taakverdeling)
+* [Ideeën](#ideeën)
 * [Schetsen](#schetsen)
 * [Coding style](#coding-style)
 * [Installeren](#installeren)
@@ -21,7 +21,12 @@ Voor het vak Realtime Web gaan we samen een basic Chatroom app maken. Deze app g
 * [License](#license)
 
 
-## Taakverdeling
+## Ideeën
+
+- Lijst met gebruikers die online zijn
+- Weather API
+- Woonkamer idee met grappige interactieve onderdelen
+
 Voor dit project hebben we de taken verdeeld over de drie teamleden. Hieronder kan je zien welke taken we hebben bedacht en wie ze heeft gedaan.
 
 | Taak | Wie? |
@@ -128,6 +133,11 @@ Deze Chatroom app is gemaakt door:
 Copyright © 2023 
 
 Dit project is [MIT](https://github.com/Inevdhoven/chatroom/blob/main/LICENSE) licensed.
+
+## Sources
+- https://www.ecosia.org/images?q=plant%20leaves%20pixel%20gif#id=67DB588371C93DAE486A81024E3058217336FC03
+- https://giphy.com/gifs/hoppip-cat-hoppip-pixel-7Cr71vflxfGFO
+
 
 
 
