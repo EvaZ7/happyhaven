@@ -27,7 +27,7 @@ Voor het vak Realtime Web gaan we samen een basic Chatroom app maken. Deze app g
 - Weather API
 - Woonkamer idee met grappige interactieve onderdelen
 
-![desgin1](https://user-images.githubusercontent.com/43877754/232475289-c7f46b90-ebf0-43ea-bc85-ffba54eb531d.jpg)
+![desgin1](https://github.com/EvaZ7/happyhaven/blob/c3889212296e870f9a00db111ba33a72f7386490/readmeimg/designproto.png)
 
 Voor dit project hebben we de taken verdeeld over de drie teamleden. Hieronder kan je zien welke taken we hebben bedacht en wie ze heeft gedaan.
 
