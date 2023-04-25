@@ -34,7 +34,7 @@ socket.on('typing', (inputName) => {
   typingState.innerHTML= ( inputName + " is aan het typen...")
   setTimeout(() => {
     typingState.innerHTML= "";
-  }, 3000);
+  }, 5000);
 })
 
 socket.on('history', (history) => {
@@ -47,3 +47,8 @@ function addChat(data) {
   messages.appendChild(Object.assign(document.createElement('li'), { textContent: data.name + ': ' + data.message }))
   messages.scrollTop = messages.scrollHeight
 }
+
+navigator.geolocation.watchPosition((position) => {
+  console.log(position.coords.latitude, position.coords.longitude);
+});
+
