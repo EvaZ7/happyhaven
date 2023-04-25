@@ -40,8 +40,7 @@ Mijn eerste idee is om een chatroom te maken waarin gebruikers die online zijn l
 Voor de eindopdracht van dit vak heb ik als idee om een soort online huiskamer te maken in de vorm van een chatroom. Dus dat gebruikers naast chatten ook het weer kunnen zien, de achtergrond kunnen veranderen van de huiskamer, hun eigen naam kunnen instellen etc.
 
 **Concept 3**
-
-Voor de eindopdracht van dit vak heb ik als idee om een soort online huiskamer te maken in de vorm van een chatroom. Dus dat gebruikers naast chatten ook het weer kunnen zien, de achtergrond kunnen veranderen van de huiskamer, hun eigen naam kunnen instellen etc. Dit concept wordt in de loop van de weken verder aangevuld!
+Voor de eindopdracht van dit vak heb ik als idee om een soort online huiskamer te maken in de vorm van een chatroom. Dus dat gebruikers naast chatten ook het weer kunnen zien, de achtergrond kunnen veranderen van de huiskamer, hun eigen naam kunnen instellen enhet weer kunnen zien dit zowel bij zichzelf als bij andere gebruikers. Dit concept wordt in de loop van de weken verder aangevuld!
 
 ### Feedback
 
@@ -53,17 +52,19 @@ Ik heb voor dit project verschillende ontwerpen gemaakt in Figma. Deze heb ik ui
 
 **Ontwerp 1**
 
-![desgin1](https://github.com/EvaZ7/happyhaven/blob/c3889212296e870f9a00db111ba33a72f7386490/readmeimg/designproto.png)
+![desgin1](https://github.com/EvaZ7/happyhaven/blob/12688aba7e9ed6f9f6f654a86b4e84707d94e379/readmeimg/design1.png)
 
 **Ontwerp 2**
 
-![desgin2](https://user-images.githubusercontent.com/43877754/232475289-c7f46b90-ebf0-43ea-bc85-ffba54eb531d.jpg)
+![desgin2](https://github.com/EvaZ7/happyhaven/blob/12688aba7e9ed6f9f6f654a86b4e84707d94e379/readmeimg/design2.png)
 
 **Ontwerp 3**
 
-![design3](https://user-images.githubusercontent.com/43877754/232475302-0fbcd601-897d-412e-94f5-fa9bd6d8df13.jpg)x
+![design3](https://github.com/EvaZ7/happyhaven/blob/12688aba7e9ed6f9f6f654a86b4e84707d94e379/readmeimg/design3.png)
 
 ### Uiteindelijke ontwerp
+
+Ontwerp 3 is het uiteindelijke ontwerp geworden voor mijn concept, maar dan eerst zonder de locatie achter de gebruikersnamen. Dit ontwerp is een combinatie van ontwerp een en twee.
 
 <!-- Nadat we allemaal een ontwerp hadden gemaakt zijn we gaan kijken welke we het mooist vinden. Hieruit kwam dat we niet specifiek een konden kiezen, daarom hebben we de drie ontwerpen bij elkaar gevoegd. Zo hebben we van Eva de kleuren gekozen, van Pip de achtergrond en van Ine hebben we het input veld gepakt. Dit is het uiteindelijke ontwerp geworden. -->
 
