@@ -105,7 +105,7 @@ Ik vind het zelf ook nog fijn om een formatter te gebruiken, zodat mijn code con
 Om deze app te gebruiken, moet je deze repository clonen. Je kunt dit doen door het volgende commando in je terminal te typen:
 
 ```
-git clone https://github.com/Inevdhoven/chatroom
+git clone https://github.com/EvaZ7/chatroom
 ```
 
 Na het clonen van de repo, moet je de dependencies installeren. Dit kun je doen door het volgende commando in je terminal te typen:
@@ -126,7 +126,7 @@ Vervolgens kun je de app starten met dit commando:
 npm start
 ```
 
-Yes, je bent nu helemaal klaar! Ga naar `http://localhost:4200/` en geniet van SpeakEasy!
+Yes, je bent nu helemaal klaar! Ga naar `http://localhost:4200/` en geniet van Happy Haven!
 
 
 ## Hoe gebruik je dit project?

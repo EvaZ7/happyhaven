@@ -45,6 +45,13 @@ io.on('connection', (socket) => {
         socket.broadcast.emit("typing", inputName);
     });
 
+    // data variable from input field in chat message
+    socket.on("roomstyle", (selectedRoom) => {
+        console.log("roomstyling");
+        //broadcast shows the content to all users except the newly created user which is you (event and data from input field)
+        io.sockets.emit("roomstyle", selectedRoom);
+    });
+
     socket.on('disconnect', () => {
         console.log('user disconnected')
     })
