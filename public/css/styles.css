@@ -67,9 +67,20 @@ h2{
 header {
   position: absolute;
   top: 0;
-  left: 50vw;
+  right: 0;
   display: flex;
   justify-content: center;
+}
+
+
+
+
+
+/**************/
+/*** FOOTER ***/
+/**************/
+footer {
+  display: none;
 }
 
 
@@ -102,6 +113,9 @@ main section:first-of-type form fieldset {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   gap: 0.5em;
+
+  height: 15em;
+  overflow-y: scroll;
 }
 
 /*title pick a roomstyle*/
@@ -112,6 +126,28 @@ main section:first-of-type form fieldset legend {
   font-size: 1.5em;
   font-weight: 700;
 }
+/*change room button*/
+main section:first-of-type form {
+  position: relative;
+}
+main section:first-of-type form button {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 800;
+  /* position: absolute; */
+  height: 3em;
+  width: 8em;
+
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  color: var(--pure-black);
+  background-color: var(--white);
+  border: 0;
+  border-radius: 3em;
+}
+main section:first-of-type form button:hover {
+  background-color: var(--decoration-purple);
+}
+
 /*form for roomstyle radiobuttons*/
 main section:first-of-type form input {
 display: none;
@@ -121,17 +157,25 @@ display: none;
 main section:first-of-type form label {
   width: 10em;
   height: 8em;
+  z-index: 1;
+  cursor: pointer;
 }
-main section:first-of-type form input:checked+label{
-  outline: 0.1em solid var(--white);
-  border: 0.15em solid var(--background-black);
-  font-weight: 600;
+
+main section:first-of-type form input:checked+label img{
+  border: 0.25em solid var(--white);
   filter: brightness(80%);
 }
 /*form for roomstyle images*/
 main section:first-of-type form img{
   height: 8em;
   width: 10em;
+  border-radius: 1em;
+  /* pointer-events: none; */
+}
+
+/*names of online users*/
+main section:first-of-type ul li p {
+  color: var(--white);
 }
 
 
@@ -149,8 +193,18 @@ main section:nth-of-type(2) {
   width: 70vw;
 }
 
+/*styling different backgrounds*/
+main section:nth-of-type(2).style1 {
+  background-image: url("../img/defaultback.png");
+}
+main section:nth-of-type(2).style2 {
+  background-image: url("../img/beachroom.jpeg");
+}
 main section:nth-of-type(2).style3 {
-  background-size: 1em;
+  background-image: url("../img/catcafe.webp");
+}
+main section:nth-of-type(2).style4 {
+  background-image: url("../img/livingroomsketch.jpeg");
 }
 
 /*list with messages*/
