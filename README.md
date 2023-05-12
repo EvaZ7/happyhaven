@@ -188,6 +188,58 @@ Op vrijdag heb ik een hop feedback ontvangen in de vorm van issues op GitHub. Ik
 
 Ik ben op maandag begonnen met het verder uitwerken van mijn 3 concepten. Hier heb heb ik kleine interfaces/schetsen voor gemaakt in Figma en een toelichting bij geschreven(deze kun je [hierboven](#ideeën-en-concept) in mijn readme terugvinden). Hierna ben ik op zoek gegaan naar geschikte API's voor mijn concept en heb ik alvast een functie geschreven die de geolocatie van de gebruiker teruggeeft in de vorm van coördinaten.
 
+### Week 3
+
+### Data modelling
+
+![desgin2](https://github.com/EvaZ7/happyhaven/blob/12688aba7e9ed6f9f6f654a86b4e84707d94e379/readmeimg/design2.png)
+
+### Spike solution
+
+Eigenlijk heb ik 2 verschillende API's namelijk een geolocation API die build in is en een externe API, wat mijn weer API is.
+
+Ten eerste heb ik de geolaction API getest. Ik heb getest of ik de huidige locatie van mijn gebruiker/ pc kan loggen naar mijn console. Dit is mij gelukt met de volgende code, ik heb hiervoor een watchposition gebruikt in plaats van getcurrentposition omdat de API dan telkens de coördinaten update als het apparaat van positie veranderd in plaats van maar een keer deze coördinaten op te halen.
+```
+navigator.geolocation.watchPosition((position) => {
+  console.log(position.coords.latitude, position.coords.longitude);
+});
+```
+Voor de Weather-API heb ik eerst gekeken of ik het weer van een aantal test/vaste coördinaten kon ophalen, dit heb ik als volgt gedaan.
+```
+function updateData() {
+  const lat = "52.7037"
+  const lon = "4.7046"
+  const apiKey = "c04cdde0d029a13051d3d39a8c83f4f1";
+  const lang = "nl"
+  const url1 = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric&lang=${lang}`;
+
+  try {
+    const response = await fetch(url1)
+    const data = await response.json()
+
+    displayData(data);
+
+  } catch(err){
+    console.log(err)
+  }
+}
+
+function displayData(data) {
+    if(data) {
+      console.log(data)
+      let location = data.name
+      let temperature = Math.round(data.main.temp) + "˚C"
+      let description = data.weather[0].description
+      let icon = data.weather[0].icon
+      weatherArticle.innerHTML = ''
+      weatherArticle.insertAdjacentHTML("beforeend", `<img src="https://openweathermap.org/img/wn/${icon}@2x.png"><h3>${location}</h3><p>${temperature}</p><p>${description}</p>`);
+    }
+}
+```
+
+### Data lifecycle diagram
+
+
 <!-- Here are some hints for your project! -->
 
 <!-- Start out with a title and a description -->

@@ -217,7 +217,7 @@ main section:nth-of-type(2) ul {
 
 /*Message field*/
 main section:nth-of-type(2) form {
-  background-color: hotpink;
+  /* background-color: hotpink; */
   display: flex;
   flex-direction: column;
   position: relative;

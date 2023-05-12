@@ -14,7 +14,7 @@ let weatherArticle = document.querySelector("header article")
 
 let canUpdate = true;
 
-//Due to max API calls up to 1000 a day, a setinterval of 2 minutes is added
+//Due to max API calls up to 1000 a day, a setinterval of 2 minutes is added please DO NOT REMOVE!!!
 function limitApiCalls() {
   setInterval(() => {
     canUpdate = true;
