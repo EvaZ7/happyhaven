@@ -22,25 +22,21 @@ button:not([disabled]) {
   cursor: pointer;
 }
 
-
-
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
 :root {
   --pure-black: #000;
   --background-black: #242424;
-  --frame-black: #5C5C5C;
+  --frame-black: #5c5c5c;
   --white: #fff;
 
-  --decoration-orange: #FBB95C;
-  --decoration-pink: #FFD1DC;
-  --decoration-purple: #C1B0E1;
-  --decoration-yellow: #FDFD96;
-  --decoration-green: #CBF3B7;
+  --decoration-orange: #fbb95c;
+  --decoration-pink: #ffd1dc;
+  --decoration-purple: #c1b0e1;
+  --decoration-yellow: #fdfd96;
+  --decoration-green: #cbf3b7;
 }
-
-
 
 /**************/
 /*** BASICS ***/
@@ -48,18 +44,19 @@ button:not([disabled]) {
 body {
   background-color: var(--background-black);
 }
-h1{
+h1 {
   font-family: Arial, Helvetica, sans-serif;
   margin-top: 1rem;
   margin-bottom: 0;
   color: var(--white);
+  text-shadow: var(--decoration-purple) 1px 0 10px,
+    var(--decoration-purple) 1px 0 10px, var(--decoration-purple) 1px 0 10px;
+  margin-right: 10em;
 }
-h2{
+h2 {
   font-family: Arial, Helvetica, sans-serif;
   color: var(--white);
 }
-
-
 
 /**************/
 /*** HEADER ***/
@@ -72,9 +69,29 @@ header {
   justify-content: center;
 }
 
+header article {
+  background-color: white;
+  font-family: Arial, Helvetica, sans-serif;
 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
+  margin-right: 3em;
+  border-radius: 1em;
+}
 
+header article img {
+  background-color: lightblue;
+  height: 5em;
+  margin-bottom: 0;
+  border-radius: 1em;
+  margin-top: 0.5em;
+}
+
+header article p {
+  margin: 0.2em;
+}
 
 /**************/
 /*** FOOTER ***/
@@ -82,8 +99,6 @@ header {
 footer {
   display: none;
 }
-
-
 
 /*************/
 /*** MAIN ***/
@@ -150,7 +165,7 @@ main section:first-of-type form button:hover {
 
 /*form for roomstyle radiobuttons*/
 main section:first-of-type form input {
-display: none;
+  display: none;
 }
 
 /*form for roomstyle labels*/
@@ -161,12 +176,12 @@ main section:first-of-type form label {
   cursor: pointer;
 }
 
-main section:first-of-type form input:checked+label img{
+main section:first-of-type form input:checked + label img {
   border: 0.25em solid var(--white);
   filter: brightness(80%);
 }
 /*form for roomstyle images*/
-main section:first-of-type form img{
+main section:first-of-type form img {
   height: 8em;
   width: 10em;
   border-radius: 1em;
@@ -177,8 +192,6 @@ main section:first-of-type form img{
 main section:first-of-type ul li p {
   color: var(--white);
 }
-
-
 
 /*** SECTION 2 ***/
 main section:nth-of-type(2) {
@@ -274,7 +287,7 @@ section:nth-of-type(2) ul {
   background: transparent;
 }
 
-section:nth-of-type(2) ul li{
+section:nth-of-type(2) ul li {
   font-family: "omnes-georgian", sans-serif;
   font-weight: 500;
   font-style: normal;
@@ -295,8 +308,6 @@ section:nth-of-type(2) p {
   color: var(--white);
 }
 
-
-
 /***************/
 /*media queries*/
 /***************/
@@ -308,5 +319,4 @@ section:nth-of-type(2) p {
   /* main section:nth-of-type(2) form input {
     width: 50em;
   } */
-
 }

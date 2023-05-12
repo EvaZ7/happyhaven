@@ -2,28 +2,37 @@
 
 # Chatroom App
 
-Voor het vak Realtime Web gaan we samen een basic Chatroom app maken. Deze app gaan we maken met Node.js, Express en Socket.io.
+In dit project heb ik een chatroom ontworpen met iets *extra's*. Ik ben erg tevreden met het eindresultaat, ook al had ik graag nog een aantal dingen willen toevoegen (zie mijn wishlist). Ik ben het meest trots op mijn kleine weer (build in) app, omdat deze op basis van livelocatie steeds update en de bijpassende icoontjes natuurlijk ;)
 
-(description of our project)
+De chatroom bestaat verder uit het aanpassen van de stijl van de chatroom en de chatfunctie zelf natuurlijk met een zelf gekozen nickname.
 
 ## Live demo
 
-[HappyHaven](https://happyhaven.adaptable.app/)
+[Happy Haven](https://happyhaven.up.railway.app/)
 
+Kappote versie:
+[looping version because of adaptable....](https://happyhaven.adaptable.app/)
 
 ## Table of Contents
 * [Ideeën en concept](#ideeën-en-concept)
 * [Schetsen](#schetsen)
 * [Coding style](#coding-style)
 * [Installeren](#installeren)
-* [Gebruik van het project](#gebruik-van-het-project)
 * [API](#api)
-* [Features](#features)
+* [Auteur](#features)
 * [License](#license)
 * [Help](#help)
 
 * [Proces](#proces)
   * [Week 1](#week-1)
+  * [Week 2](#week-2)
+  * [Week 3](#week-3)
+  * [Data moddeling](#data-moddeling)
+  * [Spike solution](#spike-solution)
+  * [Data lifecycle diagram](#data-lifecycle-diagram)
+  * [Realtime events](#realtime-events)
+  * [Wishlist](#wishlist)
+  * [Sources](#sources)
 
 ## Ideeën en concept
 
@@ -70,6 +79,8 @@ Ontwerp 3 is het uiteindelijke ontwerp geworden voor mijn concept, maar dan eers
 
 ![finaldesign](https://user-images.githubusercontent.com/43877754/232475322-5537541c-ae6d-42e5-9e8d-214fd8c42d60.jpg)
 
+Het uiteindelijk concept is een chatroom waarin gebruikers niet alleen met elkaar kunnen chatten, maar ook de roomstijl zelf kunnen aanpassen en het weer kunnen zien. De gebruiker kan verder zelf een gebruikersnaam instellen en er zijn verschillende achtergronden beschikbaar om de chatroom aan te passen voor de gehele groep. Het weer wordt weergeven door middel van een bijpassend icoon, de temperatuur en een beschrijving van het huidige weer. Om de twee minuten wordt het weer geüpdatet op basis van de huidige locatie van de gebruiker.
+
 ## Coding style
 Om ervoor te zorgen dat mijn code overzichtelijk en netjes is, hebben ik een aantal regels opgesteld. Deze regels zijn:
 
@@ -100,7 +111,6 @@ In mijn code ga ik gebruik maken van code comments. In deze comments beschrijf i
 
 Ik vind het zelf ook nog fijn om een formatter te gebruiken, zodat mijn code consistent blijft en "netjes" is, ook in verband met de overdraagbaarheid van mijn code. Ik gebruik hiervoor Prettier.
 
-
 ## Installeren
 Om deze app te gebruiken, moet je deze repository clonen. Je kunt dit doen door het volgende commando in je terminal te typen:
 
@@ -128,24 +138,31 @@ npm start
 
 Yes, je bent nu helemaal klaar! Ga naar `http://localhost:4200/` en geniet van Happy Haven!
 
-
-## Hoe gebruik je dit project?
-
 ## API
 
 Ik zou in mijn real-time web app graag een weer API, willen gebruiken. Deze wil ik dan laten bijwerken op basis van locatie. Ik wil uit deze API graag de locatie, de temperatuur in graden Celsius en een tekstuele beschrijving van het weer (b.v. het is momenteel overwegend bewolkt etc.). Verder zou ik ook nog graag een icoontje aan het weer willen toevoegen om het wat visueler en vrolijker te maken, dus een wolkje met een zonnetje etc. Wat wel van belang is voor de API over het weer is dat het gebruikt maakt van coördinaten als locatie zodat ik deze later weer kan koppelen aan mijn opgehaalde geolocatie van de gebruiker. Ik heb hiervoor 2 verschillende API's gevonden. Namelijk een hele eenvoudige van [Yahoo](https://www.npmjs.com/package/yahoo-weather) en een iets complexere van [OpenWeatherMap](https://openweathermap.org/current).
 
 Voor de geolocatie heb ik de volgende API gevonden met een zeer uitgebreide en fijne documentatie in [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API).
 
-## Features
-<!-- - [X] Kies een nickname
-- [X] Verstuur berichten
-- [X] Ontvang berichten van andere gebruikers
-- [X] Zie wanneer een een andere gebruiker aan het typen is -->
+Hoe gebruik je de API?
 
+1. Maak een account aan op [OpenWeatherMap](https://openweathermap.org/) je krijgt dan een API-key toegestuurd via je mail.
+2. Zet je API-key in de API link samen met de coördinaten van je huidige locatie en de gewenste taal:
+```
+https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric&lang=${taal}
+```
+De coordinaten (laitude en longitude) haal ik zelf op via de geolocatie API. Deze bestaan uit een getal voor de longitude en een getal voor de latitude.
 
+De taal kan je ook meegeven aan het einde van de API link dit doe je in de vorm van een landcode, deze codes zijn terug te vinden in de documentatie van de API.
 
-## Makers
+3. Als laatste heb je ook nog een optie om de *units* te bepalen voor data die uit de API komt, de temperatuur kom namelijk standaard in graden Kelvin. Dit heb ik aangepast door de link van de API aan te passen door het volgende toe te voegen na de API-key.
+```
+&units=metric
+```
+
+**Let op** de API heeft een maximaal aantal requests van 1000 per dag
+
+## Auteur
 
 Deze Chatroom app is gemaakt door:
 [Eva Zaadnoordijk](https://github.com/EvaZ7) (500847567) 2023 for Communication and Multimedia Design at the Amsterdam University of Applied Sciences.
@@ -160,13 +177,6 @@ Dit project is [MIT](https://github.com/EvaZ7/happyhaven/blob/713579fd15a0df9c66
 
 Are some parts still a bit confusing? Feel free to contact me at: eva.zaadnoordijk.zaadnoordijk@hva.nl
 Zijn sommige dingen nog er verwarrend, neem dan contact met mij op via [mail](eva.zaadnoordijk.zaadnoordijk@hva.nl).
-
-## Sources
-- https://www.ecosia.org/images?q=plant%20leaves%20pixel%20gif#id=67DB588371C93DAE486A81024E3058217336FC03
-- https://giphy.com/gifs/hoppip-cat-hoppip-pixel-7Cr71vflxfGFO
-- https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API
-- https://www.npmjs.com/package/yahoo-weather
-- https://openweathermap.org/current
 
 ## Proces
 
@@ -190,9 +200,11 @@ Ik ben op maandag begonnen met het verder uitwerken van mijn 3 concepten. Hier h
 
 ### Week 3
 
+In week drie heb ik de puntjes op de i gezet en ben ik aan de slag gegaan met mijn API, data modeling en het koppelen van de huidige geolocatie van de gebruiker aan mijn gekozen API. Ik heb verder gekeken naar de data uit de API en hoe ik deze het beste kon implementeren in mijn online chat omgeving.
+
 ### Data modelling
 
-![desgin2](https://github.com/EvaZ7/happyhaven/blob/12688aba7e9ed6f9f6f654a86b4e84707d94e379/readmeimg/design2.png)
+![data model](https://github.com/EvaZ7/happyhaven/blob/4e5130c2a64e8bb51e5c28a43e3dd1ab0bc59441/readmeimg/datamodel.png)
 
 ### Spike solution
 
@@ -239,31 +251,24 @@ function displayData(data) {
 
 ### Data lifecycle diagram
 
+![banner_happyhaven](https://user-images.githubusercontent.com/54938035/232477598-1d0c0726-5f66-4bbb-a7fa-2a31ae7d7f78.svg)
 
-<!-- Here are some hints for your project! -->
+## Realtime events
 
-<!-- Start out with a title and a description -->
+In mijn chatapplicatie maak ik gebruik van realtime events. Zo kan elke gebruiker de achtergrond voor iedereen aanpassen. Ook kan een gebruiker berichten sturen naar iedereen met een eigen gekozen nickname. Verder is voor elke gebruiker individueel het weer zichtbaar, dit is op basis van de huidige locatie van de gebruiker.
 
-<!-- Add a link to your live demo in Github Pages 🌐-->
+## Wishlist
 
-<!-- ☝️ replace this description with a description of your own work -->
+In de toekomst zou ik nog het volgende willen implementeren in mijn applicatie omdat ik hier helaas niet aan toe ben gekomen.
 
-<!-- replace the code in the /docs folder with your own, so you can showcase your work with GitHub Pages 🌍 -->
+- Lijst met online gebruikers
+- Het weer van elke online gebruiker zichtbaar maken voor iedereen
+- Meer styling toevoegen aan de applicatie.
 
-<!-- Add a nice image here at the end of the week, showing off your shiny frontend 📸 -->
-
-<!-- Maybe a table of contents here? 📚 -->
-
-<!-- How about a section that describes how to install this project? 🤓 -->
-
-<!-- ...but how does one use this project? What are its features 🤔 -->
-
-<!-- What external data source is featured in your project and what are its properties 🌠 -->
-
-<!-- This would be a good place for your data life cycle ♻️-->
-
-<!-- Maybe a checklist of done stuff and stuff still on your wishlist? ✅ -->
-
-<!-- How about a license here? 📜  -->
-
-https://socket.io/docs/v4/emit-cheatsheet/
+## Sources
+- https://www.ecosia.org/images?q=plant%20leaves%20pixel%20gif#id=67DB588371C93DAE486A81024E3058217336FC03
+- https://giphy.com/gifs/hoppip-cat-hoppip-pixel-7Cr71vflxfGFO
+- https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API
+- https://www.npmjs.com/package/yahoo-weather
+- https://openweathermap.org/current
+- https://socket.io/docs/v4/emit-cheatsheet/
