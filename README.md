@@ -1,4 +1,4 @@
-![banner_happyhaven](https://user-images.githubusercontent.com/54938035/232477598-1d0c0726-5f66-4bbb-a7fa-2a31ae7d7f78.svg)
+![banner_happyhaven](https://github.com/EvaZ7/happyhaven/blob/75dc4adc9b3e1c11e7e15eb0f38a89da8c14a0f1/readmeimg/homepage.png)
 
 # Chatroom App
 
@@ -77,7 +77,7 @@ Ontwerp 3 is het uiteindelijke ontwerp geworden voor mijn concept, maar dan eers
 
 <!-- Nadat we allemaal een ontwerp hadden gemaakt zijn we gaan kijken welke we het mooist vinden. Hieruit kwam dat we niet specifiek een konden kiezen, daarom hebben we de drie ontwerpen bij elkaar gevoegd. Zo hebben we van Eva de kleuren gekozen, van Pip de achtergrond en van Ine hebben we het input veld gepakt. Dit is het uiteindelijke ontwerp geworden. -->
 
-![finaldesign](https://user-images.githubusercontent.com/43877754/232475322-5537541c-ae6d-42e5-9e8d-214fd8c42d60.jpg)
+![finaldesign](https://github.com/EvaZ7/happyhaven/blob/75dc4adc9b3e1c11e7e15eb0f38a89da8c14a0f1/readmeimg/homepage.png)
 
 Het uiteindelijk concept is een chatroom waarin gebruikers niet alleen met elkaar kunnen chatten, maar ook de roomstijl zelf kunnen aanpassen en het weer kunnen zien. De gebruiker kan verder zelf een gebruikersnaam instellen en er zijn verschillende achtergronden beschikbaar om de chatroom aan te passen voor de gehele groep. Het weer wordt weergeven door middel van een bijpassend icoon, de temperatuur en een beschrijving van het huidige weer. Om de twee minuten wordt het weer geüpdatet op basis van de huidige locatie van de gebruiker.
 
@@ -190,8 +190,6 @@ Bekijk onze [SpeakEasy](https://chatroom-speakeasy.adaptable.app)
 
 Verder heb ik deze week een kopie gemaakt van de chatapp van ons team en hier mijn eigen chatapp van gemaakt. Ik heb een functie aan de chat toegevoegd die ervoor zorgt dat de geschiedenis van de chatapp ook zichtbaar is voor nieuwe gebruikers die zich bij de chat aansluiten. Verder heb ik alvast een idee bedacht voor mijn eindopdracht en hiervoor een eerste schets gemaakt.
 
-![banner_happyhaven](https://user-images.githubusercontent.com/54938035/232477598-1d0c0726-5f66-4bbb-a7fa-2a31ae7d7f78.svg)
-
 Op vrijdag heb ik een hop feedback ontvangen in de vorm van issues op GitHub. Ik heb de feedback die nu al van toepassing was gelijk aangepast in mijn chatapp en de overige feedback laten staan zodat ik deze in de toekomst nog kan gebruiken, de overige feedback waren namelijk meer suggesties en ideeën voor mijn chatapp dan concrete problemen.
 
 ### Week 2
@@ -251,7 +249,7 @@ function displayData(data) {
 
 ### Data lifecycle diagram
 
-![banner_happyhaven](https://user-images.githubusercontent.com/54938035/232477598-1d0c0726-5f66-4bbb-a7fa-2a31ae7d7f78.svg)
+![banner_happyhaven](https://github.com/EvaZ7/happyhaven/blob/75dc4adc9b3e1c11e7e15eb0f38a89da8c14a0f1/readmeimg/datalifecyclediagram.png)
 
 ## Realtime events
 
