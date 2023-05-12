@@ -265,3 +265,5 @@ function displayData(data) {
 <!-- Maybe a checklist of done stuff and stuff still on your wishlist? ✅ -->
 
 <!-- How about a license here? 📜  -->
+
+https://socket.io/docs/v4/emit-cheatsheet/
